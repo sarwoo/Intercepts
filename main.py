@@ -13,8 +13,10 @@ def save_entry():
     postcode = postcode_entry.get()
     telephone = telephone_entry.get()
 
+    compact_postcode = postcode.replace(" ", "")
+
     new_data = {
-        f"{postcode}_{name}": {
+        f"{compact_postcode}_{name}": {
             "name": name,
             "location": location,
             "address": address,
