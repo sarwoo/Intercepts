@@ -14,7 +14,7 @@ def save_entry():
     telephone = telephone_entry.get()
 
     new_data = {
-        postcode + name: {
+        f"{postcode}_{name}": {
             "name": name,
             "location": location,
             "address": address,
