@@ -3,11 +3,11 @@ import tkinter as tk
 from tkinter.ttk import Combobox
 from tkinter import messagebox
 
-# ---------------------------- UI SETUP ------------------------------- #
+# ---------------------------- Functionality ------------------------------- #
 
 
 def save_entry():
-    name = name_entry.get()
+    company = company_entry.get()
     location = location_entry.get()
     address = address_entry.get()
     postcode = postcode_entry.get()
@@ -16,8 +16,8 @@ def save_entry():
     compact_postcode = postcode.replace(" ", "")
 
     new_data = {
-        f"{compact_postcode}_{name}": {
-            "name": name,
+        f"{compact_postcode}_{company}": {
+            "company": company,
             "location": location,
             "address": address,
             "postcode": postcode,
@@ -25,7 +25,7 @@ def save_entry():
         }
     }
 
-    if len(name) == 0 or len(location) == 0 or len(postcode) == 0:
+    if len(company) == 0 or len(location) == 0 or len(postcode) == 0:
         messagebox.showinfo(title="Oops", message="Please don't leave any fields empty!")
         return
     else:
@@ -57,8 +57,8 @@ window.title("Interception")
 window.config(padx=36, pady=36)
 
 # Field labels
-name_label = tk.Label(text="Name:")
-name_label.grid(column=0, row=0, sticky="e")
+company_label = tk.Label(text="Company:")
+company_label.grid(column=0, row=0, sticky="e")
 
 location_label = tk.Label(text="Location:")
 location_label.grid(column=0, row=1, sticky="e")
@@ -73,9 +73,9 @@ telephone_label = tk.Label(text="Telephone:")
 telephone_label.grid(column=0, row=4, sticky="e")
 
 # Field entry
-name_entry = Combobox()
-name_entry['values'] = populate_names()
-name_entry.grid(column=1, row=0, sticky="w")
+company_entry = Combobox()
+company_entry['values'] = populate_names()
+company_entry.grid(column=1, row=0, sticky="w")
 
 location_entry = Combobox()
 location_entry.grid(column=1, row=1, sticky="nsw")
