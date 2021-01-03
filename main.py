@@ -43,7 +43,7 @@ def save_entry():
                 json.dump(data, file, indent=4)
                 print("update")
         finally:
-            print("...")
+            print("....")
 
 
 def populate_names():
