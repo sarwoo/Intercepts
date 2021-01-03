@@ -46,7 +46,7 @@ def save_entry():
             print("...")
 
 
-def populate_names():
+def populate_company():
     return ['Asda', 'Co-op', 'Farmfoods', 'Lidl', 'Morrisons', 'Tesco']
 
 
@@ -74,7 +74,7 @@ telephone_label.grid(column=0, row=4, sticky="e")
 
 # Field entry
 company_entry = Combobox()
-company_entry['values'] = populate_names()
+company_entry['values'] = populate_company()
 company_entry.grid(column=1, row=0, sticky="w")
 
 location_entry = Combobox()
