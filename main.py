@@ -1,6 +1,7 @@
 import json
 import tkinter as tk
-from tkinter.ttk import Combobox
+import tkinter.ttk as ttk
+from tkinter.ttk import Combobox, Style
 from tkinter import messagebox
 
 # ---------------------------- Functionality ------------------------------- #
@@ -73,12 +74,15 @@ telephone_label = tk.Label(text="Telephone:")
 telephone_label.grid(column=0, row=4, sticky="e")
 
 # Field entry
+style = ttk.Style()
+style.theme_use('default')
+
 company_entry = Combobox()
 company_entry['values'] = populate_company()
 company_entry.grid(column=1, row=0, sticky="w")
 
 location_entry = Combobox()
-location_entry.grid(column=1, row=1, sticky="nsw")
+location_entry.grid(column=1, row=1, sticky="w")
 
 address_entry = tk.Entry()
 address_entry.grid(column=1, row=2, sticky="w")
