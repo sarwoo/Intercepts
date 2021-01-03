@@ -43,11 +43,11 @@ def save_entry():
                 json.dump(data, file, indent=4)
                 print("update")
         finally:
-            print("....")
+            print("...")
 
 
 def populate_names():
-    return ['Asda', 'Co-op', 'Farmfoods', 'Morrisons', 'Tesco']
+    return ['Asda', 'Co-op', 'Farmfoods', 'Lidl', 'Morrisons', 'Tesco']
 
 
 # ---------------------------- UI SETUP ------------------------------- #
